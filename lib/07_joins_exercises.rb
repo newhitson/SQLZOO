@@ -159,13 +159,10 @@ def films_by_cast_size
   WHERE yr = 1978
   GROUP BY title
   ORDER BY count(*) DESC, title
-
-
   SQL
 end
 
 def colleagues_of_garfunkel
-  # List all the people who have played alongside 'Art Garfunkel'.
   execute(<<-SQL)
   SELECT name
   FROM movies
